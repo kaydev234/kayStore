@@ -1,0 +1,402 @@
+#cpage {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	width: 620px;
+	padding: 2px;
+}
+#logo {
+	text-align: right;
+	vertical-align: top;
+	padding-top: 5px;
+}
+#formHeader {
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000000;
+	text-decoration: underline;
+	text-align: center;
+	vertical-align: top;
+	padding-top: 3px;
+}
+#address {
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: left;
+	vertical-align: top;
+	padding-top: 3px;
+	padding-left: 5px;
+	padding-bottom: 3px;
+}
+#address2 {
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: centre;
+	vertical-align: top;
+	padding-top: 3px;
+	padding-left: 5px;
+	padding-bottom: 3px;
+}
+#passPix {
+	text-align: center;
+	vertical-align: top;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+#fom {
+	font-size: 13px;
+	text-decoration: underline;
+	text-align: left;
+	padding: 3px 3px 3px 4px;
+	font-weight: bold;
+}
+#bioData {
+	text-align: left;
+	padding-top: 5px;
+	padding-right: 3px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+}
+#Data {
+	text-align: left;
+	padding-top: 5px;
+	padding-right: 3px;
+	padding-bottom: 5px;
+	padding-left: 3px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+#dta {
+	text-align: left;
+	padding-top: 2px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	vertical-align: top;
+}
+#biospan {
+	color: #000000;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	text-transform: uppercase;
+}
+#biospanE {
+	color: #000000;
+	font-weight: bold;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+#details {
+	font-style: italic;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: top;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#tableTop {
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000000;
+	text-align: center;
+	padding: 2px;
+	border: 1px solid #000000;
+
+}
+#tableCells {
+	font-size: 11px;
+	color: #000000;
+	text-align: center;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+	padding: 3px;
+	vertical-align: top;
+}
+#Tnum {
+	text-align: right;
+	padding: 3px;
+	font-weight: bold;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+	text-transform: uppercase;
+}
+#TNumVal {
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	padding: 3px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+#box {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+#official {
+	font-size: 12px;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: left;
+	padding: 3px;
+}
+#officialEntries {
+	text-align: center;
+	padding: 3px;
+	font-size: 11px;
+	font-weight: bold;
+	border: 1px solid #000000;
+}
+#thick {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	text-decoration: underline;
+}
+#thicken {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+#regFormBr1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 2px;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-top-color: #333333;
+	border-left-color: #333333;
+}
+#regFormBr2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding: 2px;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-top-color: #666666;
+	border-left-color: #666666;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #666666;
+}
+#regFormTp {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000000;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-top-color: #333333;
+	border-bottom-color: #333333;
+	border-left-color: #333333;
+	border-bottom-style: solid;
+	text-align: center;
+	padding: 2px;
+}
+
+#regFormTp2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000000;
+	text-align: center;
+	padding: 2px;
+	border-top: 2px solid #333333;
+	border-right: 1px solid #333333;
+	border-bottom: 2px solid #333333;
+	border-left: 1px solid #333333;
+}
+#regFormCel {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	text-align: center;
+	padding: 3px 2px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-color: #333333;
+	border-left-color: #333333;
+}
+#regFormCell {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-right-color: #333333;
+	border-bottom-color: #333333;
+	border-left-color: #333333;
+	border-bottom-style: solid;
+	text-align: center;
+	padding: 3px 2px;
+	border-right-style: solid;
+}
+#cBordr {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-align: left;
+	vertical-align: top;
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	border: 1px solid #000000;
+}
+#copies {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	padding-right: 5px;
+	padding-bottom: 2px;
+	padding-left: 5px;
+	text-align: left;
+	vertical-align: top;
+	border-right-width: 2px;
+	border-bottom-width: 2px;
+	border-left-width: 2px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #000000;
+	border-bottom-color: #000000;
+	border-left-color: #000000;
+}
+#trip {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: top;
+	padding-top: 2px;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-transform: uppercase;
+	border-top-width: 2px;
+	border-right-width: 2px;
+	border-left-width: 2px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #000000;
+	border-left-color: #000000;
+}
+#buttline {
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+}
+#datar {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding-top: 10px;
+	padding-right: 3px;
+	padding-bottom: 10px;
+	padding-left: 3px;
+	text-align: left;
+	vertical-align: top;
+	line-height: 20px;
+}
+#fl {
+	text-align: left;
+	font-variant: small-caps;
+	border-top: 1px solid #333333;
+	border-right: 1px #333333;
+	border-bottom: 1px #333333;
+	border-left: 1px solid #333333;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+
+
+
+
+}
+#fr {
+	text-align: right;
+	font-variant: small-caps;
+	border-top: 1px solid #333333;
+	border-right: 1px solid #333333;
+	border-bottom: 1px #333333;
+	border-left: 1px #333333;
+	padding-top: 10px;
+
+
+
+}
+#ndiv {
+	text-align: left;
+	float: left;
+	width: 760px;
+}
+#libBase {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-variant: small-caps;
+}
+#fl2 {
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-bottom-color: #333333;
+	border-left-color: #333333;
+
+}
+#fr2 {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #333333;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align: right;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #333333;
+	padding-bottom: 5px;
+}

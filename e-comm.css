@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.body {
+    background-image: radial-gradient(red);
+}
+.navbar {
+    background-color: #333;
+    box-shadow: #007bff;
+}
+/* 
+.Carousel Section {
+
+} */
+
+
+
+.hero-section {
+    background-color: #007bff;
+    color: white;
+    padding: 50px 0;
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+}
+

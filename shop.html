@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kay Store - Shop</title>
+<link href="bootstrap-5.3.3-dist/bootstrap.css" rel="stylesheet">
+<style>
+    body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+    }
+    .navbar {
+        background-color: #ff9900 !important;
+    }
+    .navbar-brand, .nav-link, .btn {
+        color: white !important;
+    }
+    .product-card {
+        border: #f5f5f5;
+        border-radius: 5px;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        background: #ff9900;
+        /* align-items: center;
+        justify-content: center; */
+        /* display: flex;
+      justify-content: center;
+      margin: 30px 0; */
+    }
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    }
+    .product-card img {
+        height: 160px;
+        object-fit: cover;
+        display: flex;
+      justify-content: center;
+      margin: 30px 0;
+      grid-row: inherit;
+    }
+    .cart-badge {
+        background-color: red;
+        color: black;
+        border-radius: 50%;
+        padding: 4px 8px;
+        font-size: 12px;
+        vertical-align: top;
+        margin-left: 5px;
+    }
+    .search-bar {
+        max-width: 400px;
+    }
+    .modal-content {
+        border-radius: 10px;
+    }
+    table img {
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Kay Store</a>
+        <form class="d-flex ms-auto me-3 search-bar">
+            <input class="form-control" type="search" placeholder="Search products..." id="searchInput">
+        </form>
+        <button class="btn btn-dark me-2" data-bs-toggle="modal" data-bs-target="#cartModal">
+            Quick View Cart <span id="cart-count" class="cart-badge">0</span>
+        </button>
+        <a href="cart.html" class="btn btn-success">Go to Cart</a>
+    </div>
+</nav>
+
+<!-- Product List -->
+<div class="container mt-4">
+    <div class="row" id="product-list">
+        <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card product-card">
+                <img src="lap.avif" class="card-img-top" alt="Laptop">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Laptop</h5>
+                    <p class="card-text fw-bold">$800</p>
+                    <button class="btn btn-warning add-to-cart" data-name="Laptop" data-price="800" data-image="lap.avif">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <!-- Add more products here -->
+    </div>
+</div>
+
+<!-- Quick View Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content p-3">
+            <div class="modal-header border-0">
+                <h5 class="modal-title">Your Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price ($)</th>
+                            <th>Quantity</th>
+                            <th>Total ($)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items"></tbody>
+                </table>
+                <div class="text-end fw-bold fs-5">Total: $<span id="cart-total">0</span></div>
+            </div>
+            <div class="modal-footer border-0">
+                <a href="cart.html" class="btn btn-success">Go to Cart Page</a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="bootstrap-5.3.3-dist/bootstrap.bundle.js"></script>
+<script>
+function updateCartBadge() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let count = cart.reduce((acc, item) => acc + (item.quantity || 0), 0);
+    document.getElementById('cart-count').textContent = count;
+}
+
+function renderCartModal() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cartItemsContainer = document.getElementById('cart-items');
+    cartItemsContainer.innerHTML = '';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+        let itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        cartItemsContainer.innerHTML += `
+            <tr>
+                <td><img src="${item.image}" width="50"> ${item.name}</td>
+                <td>${item.price}</td>
+                <td>
+                    <input type="number" min="0" value="${item.quantity}" data-index="${index}" class="form-control quantity-input">
+                </td>
+                <td>${itemTotal.toFixed(2)}</td>
+                <td><button class="btn btn-danger btn-sm remove-item" data-index="${index}">Remove</button></td>
+            </tr>
+        `;
+    });
+
+    document.getElementById('cart-total').textContent = total.toFixed(2);
+    updateCartBadge();
+}
+
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('add-to-cart')) {
+        let name = e.target.getAttribute('data-name');
+        let price = parseFloat(e.target.getAttribute('data-price'));
+        let image = e.target.getAttribute('data-image');
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let existingItem = cart.find(item => item.name === name);
+
+        if (existingItem) {
+            existingItem.quantity++;
+        } else {
+            cart.push({ name, price, image, quantity: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartBadge();
+    }
+
+    if (e.target.classList.contains('remove-item')) {
+        let index = e.target.getAttribute('data-index');
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCartModal();
+    }
+});
+
+document.addEventListener('input', function(e) {
+    if (e.target.classList.contains('quantity-input')) {
+        let index = e.target.getAttribute('data-index');
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let newQty = parseInt(e.target.value);
+        if (newQty <= 0) {
+            cart.splice(index, 1);
+        } else {
+            cart[index].quantity = newQty;
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCartModal();
+    }
+});
+
+document.getElementById('cartModal').addEventListener('show.bs.modal', renderCartModal);
+updateCartBadge();
+</script>
+
+</body>
+</html>
