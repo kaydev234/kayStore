@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Jumia Clone</title>
+    <link href="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Jumia Clone</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="e-comm.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Register Section -->
+    <div class="container py-5">
+        <h2>Register</h2>
+        <form>
+            <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-success">Register</button>
+                <a href="login.html" class="btn btn-link">Already have an account? Login</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Jumia Clone. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+</body>
+</html>
+
