@@ -1,27 +1,13 @@
 {
   "functions": {
-    "public/**/*.php": {
+    "public/index.php": {
       "runtime": "@vercel/php"
     }
   },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/public/$1"
-    }
-  ]
-}
-{
-  "buildCommand": "composer install --no-dev",
-  "functions": {
-    "public/**/*.php": {
-      "runtime": "@vercel/php"
-    }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
+      "dest": "/public/index.php"
     }
   ]
 }
