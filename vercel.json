@@ -1,10 +1,7 @@
 {
   "functions": {
-    "public/*.php": {
-      "runtime": "@vercel/php@2.0.0"
-    },
-    "public/admin/*.php": {
-      "runtime": "@vercel/php@2.0.0"
+    "public/**/*.php": {
+      "runtime": "@vercel/php"
     }
   },
   "routes": [
