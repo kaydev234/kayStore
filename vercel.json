@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "public/**/*.php": {
+      "runtime": "@vercel/php"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    }
+  ]
+}
