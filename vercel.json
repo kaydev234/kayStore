@@ -1,10 +1,11 @@
 {
   "buildCommand": "composer install --no-dev",
-  "functions": {
-    "public/**/*.php": {
-      "runtime": "@vercel/php@1.0.0"
+  "builds": [
+    {
+      "src": "public/**/*.php",
+      "use": "@vercel/php@1.0.0"
     }
-  },
+  ],
   "routes": [
     {
       "src": "/",
