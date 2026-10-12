@@ -1,22 +1,25 @@
 <?php
 session_start();
 
-// // Check if admin is logged in
-// if (!isset($_SESSION['admin_id'])) {
-//     header("Location: login_user.php?redirect=index.php");
-//     exit();
-// }
+$host = getenv('DB_HOST') ?: 'localhost';
+$dbname = getenv('DB_NAME') ?: 'kay_store';
+$username = getenv('DB_USER') ?: 'root';
+$password = getenv('DB_PASSWORD') ?: '';
 
-// Explicit database connection (fallback if config.php fails)
 try {
-    $host = 'localhost';
-    $dbname = 'kay_store';
-    $username = 'root';
-    $password = '';
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn = new PDO(
+        "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+        $username,
+        $password,
+        [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false
+        ]
+    );
 } catch (PDOException $e) {
-    die("Connection failed: " . htmlspecialchars($e->getMessage()));
+    error_log('Database connection failed: ' . $e->getMessage());
+    http_response_code(500);
+    exit('A database connection error occurred. Please try again later.');
 }
 ?>
-
